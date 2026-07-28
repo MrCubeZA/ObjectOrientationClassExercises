@@ -2,6 +2,7 @@
 using ObjectOrientationClassExercises.Encapsulation;
 using System.Runtime.InteropServices;
 using System.Linq;
+using ObjectOrientationClassExercises.Inheritance;
 
 namespace ObjectOrientationClassExercises
 {
@@ -10,9 +11,8 @@ namespace ObjectOrientationClassExercises
         static void Main(string[] args)
         {
             // EncapsulationSample.Run();
-            AbstractionSample.Run();
-
-
+            // AbstractionSample.Run();
+            InheritanceSample.Run();
         }
     }
 }
