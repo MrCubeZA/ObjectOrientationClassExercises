@@ -12,6 +12,15 @@ namespace ObjectOrientationClassExercises.Encapsulation
         public string Reference { get; set; }
         public TransactionType TransactionType { get; set; }
 
+        public Transaction(decimal amount, string description, string reference, TransactionType transactionType, DateTime transactionDateTime)
+        {
+            Amount = amount;
+            Description = description;
+            Reference = reference;
+            TransactionType = transactionType;
+            TransactionDateTime = transactionDateTime;
+        }
+
 
     }
 }

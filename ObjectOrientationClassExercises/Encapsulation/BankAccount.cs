@@ -23,7 +23,39 @@ namespace ObjectOrientationClassExercises.Encapsulation
             Balance = balance;
             CardNumber = cardNumber;
             CardExpiryDate = cardExpiryDate;
+
+            Transactions = new List<Transaction>();
         }
 
+        public TransactionResult MakeDeposit(decimal amount, string reference, string description)
+        {
+            Balance += amount;
+
+            Transaction transaction = new Transaction(amount, description, reference, TransactionType.Deposit, DateTime.Now);
+
+            Transactions.Add(transaction);
+
+            return TransactionResult.Successful;
+
+        }
+
+        public TransactionResult MakeWithdrawal(decimal amount, string reference, string description)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+
+                Transaction transaction = new Transaction(amount, description, reference, TransactionType.Withdrawal, DateTime.Now);
+
+                Transactions.Add(transaction);
+
+                return TransactionResult.Successful;
+            }
+            else
+            {
+                return TransactionResult.InsufficientFunds;
+            }
+
+        }
     }
 }
