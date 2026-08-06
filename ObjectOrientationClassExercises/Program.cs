@@ -3,6 +3,7 @@ using ObjectOrientationClassExercises.Encapsulation;
 using System.Runtime.InteropServices;
 using System.Linq;
 using ObjectOrientationClassExercises.Inheritance;
+using ObjectOrientationClassExercises.Polymorphism;
 
 namespace ObjectOrientationClassExercises
 {
@@ -12,7 +13,8 @@ namespace ObjectOrientationClassExercises
         {
             // EncapsulationSample.Run();
             // AbstractionSample.Run();
-            InheritanceSample.Run();
+            // InheritanceSample.Run();
+            PolymorphismSample.Run();
         }
     }
 }
