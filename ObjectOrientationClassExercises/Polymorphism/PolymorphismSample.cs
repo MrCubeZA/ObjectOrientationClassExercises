@@ -33,6 +33,8 @@ namespace ObjectOrientationClassExercises.Polymorphism
             {
                 Console.WriteLine($"{cagedAnimal.GetType().Name}");
                 cagedAnimal.MakeNoise();
+
+                Thread.Sleep(3000);
             }
 
         }

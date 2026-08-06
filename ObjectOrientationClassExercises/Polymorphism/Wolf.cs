@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,8 @@ namespace ObjectOrientationClassExercises.Polymorphism
         public override void MakeNoise()
         {
             Console.WriteLine("Awooo!");
+
+            PlaySound("wolf.mp3");
         }
     }
 }

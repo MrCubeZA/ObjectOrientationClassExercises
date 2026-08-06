@@ -11,18 +11,8 @@ namespace ObjectOrientationClassExercises.Polymorphism
         {
             Console.WriteLine("Roar!");
 
-            string filename = "./Polymorphism/sounds/lion.mp3";
-
-            using (var audioFile = new AudioFileReader(filename))
-            using (var outputDevice = new WaveOutEvent())
-            {
-                outputDevice.Init(audioFile);
-                outputDevice.Play();
-                while (outputDevice.PlaybackState == PlaybackState.Playing)
-                {
-                    Thread.Sleep(1000);
-                }
-            }
+            PlaySound("lion.mp3");
         }
+        
     }
 }
